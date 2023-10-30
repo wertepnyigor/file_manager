@@ -9,9 +9,10 @@ def logging():
     user_login = loginEntry.get()
     user_password = passwordEntry.get()
     if len(user_login) > 0 and len(user_password) > 0:
-        new_window = Tk()
+        new_window = Toplevel()
         new_window.title("File Manager")
         new_window.mainloop()
+
 
         if loginButton["state"] == NORMAL:
             loginButton["state"] = DISABLED
