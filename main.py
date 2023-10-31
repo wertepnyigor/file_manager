@@ -6,18 +6,25 @@ from files_handling import *
 
 
 def logging():
+    correct_login = "igor"
+    correct_pass = "dupa"
     user_login = loginEntry.get()
     user_password = passwordEntry.get()
+
     if len(user_login) > 0 and len(user_password) > 0:
-        new_window = Toplevel()
-        new_window.title("File Manager")
-        new_window.mainloop()
+        if user_login == correct_login and correct_pass == user_password:
+            new_window = Toplevel()
+            new_window.title("File Manager")
+            new_window.mainloop()
+        elif user_login != correct_login:
+            messagebox.showerror(title="Your login is incorrect or not known")
+        elif user_password != correct_pass:
+            messagebox.showerror(title="Your password is incorrect or not known")
 
-
-        if loginButton["state"] == NORMAL:
-            loginButton["state"] = DISABLED
-        else:
-            loginButton["state"] = NORMAL
+        # if loginButton["state"] == NORMAL:
+        #     loginButton["state"] = DISABLED
+        # else:
+        #     loginButton["state"] = NORMAL
 
     elif len(user_login) == 0 and len(user_password) == 0:
         messagebox.showerror(title="Logging error", message="Login and/or password blank, please type proper value")
