@@ -3,12 +3,25 @@
 #open, close etc. files between locations. In text files it will be also possible to open file in chosen
 #program (Word, Pages etc." and makes changes.
 
-
 from tkinter import *
-count = 0
+import shutil
+import os
+import easygui
+from tkinter import filedialog
+from tkinter import messagebox as mb
+
+def open_finder():
+    pass
+
+def open_file():
+    pass
+
+def move_file():
+    pass
+
+def delete_file():
+    pass
+def change_name():
+    pass
 
 
-def click():
-    global count
-    count += 1
-    print(f"You clicked the button {count} times. ")
