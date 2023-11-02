@@ -11,7 +11,8 @@ from tkinter import filedialog
 from tkinter import messagebox as mb
 
 def open_finder():
-    pass
+    read = easygui.fileopenbox()
+    return read
 
 def open_file():
     pass
@@ -22,6 +23,9 @@ def move_file():
 def delete_file():
     pass
 def change_name():
+    pass
+
+def make_directory():
     pass
 
 
