@@ -9,25 +9,25 @@ from tkinter import filedialog
 from tkinter import messagebox as mb
 
 def open_finder():
-    read = easygui.fileopenbox()
-    return read
+    read = easygui.fileopenbox() #open a file dialog window, helpful in files research
+    return read #returns a opened file
 
 def open_file():
-    file_name = open_finder()
+    file_name = open_finder() #enables opening a Finder in every button usage
     try:
-        os.startfile(file_name)
+        os.startfile(file_name) #opens a file from chosen path
     except:
-        mb.showinfo("Confirm", "File not found.")
+        mb.showinfo("Action done", "File not found.")
     pass
 
 def move_file():
     old_path = open_finder()
-    new_path = filedialog.askdirectory()
+    new_path = filedialog.askdirectory() #filedialog from tkinter lib, selection of path where to move a file
     if old_path == new_path:
-        mb.showinfo("Confirm", "Old path and new path are the same, nothing done")
+        mb.showinfo("Action done", "Old path and new path are the same, nothing done")
     else:
-        shutil.move(old_path, new_path)
-        mb.showinfo("Confirm", "File is in new path")
+        shutil.move(old_path, new_path) #shutil enables possibility for copying and archiving files
+        mb.showinfo("Action done", "File is in new path")
     pass
 
 def delete_file():
@@ -35,17 +35,17 @@ def delete_file():
     if os.path.exists(file_to_delete):
         os.remove(file_to_delete)
     else:
-        mb.showinfo("Confirm", "File does not exist!")
+        mb.showinfo("Action done", "File does not exist!")
+
 def change_name():
     file_to_change = open_finder()
     old_name = os.path.dirname(file_to_change)
-    extension = os.path.splitext(file_to_change)[1]
     print("What is the name for new file?: ")
     new_name = input()
-    new_path = os.path.join(old_name, new_name + extension)
+    new_path = os.path.join(old_name, new_name)
     print(new_path)
     os.rename(file_to_change, new_name)
-    mb.showinfo("Confirm", "File name changed.")
+    mb.showinfo("Action done", "File name changed.")
 
 def make_directory():
     directory_path = filedialog.askdirectory()
@@ -54,7 +54,7 @@ def make_directory():
     new_directory_path = os.path.join(directory_path, directory_name)
 
     os.mkdir(new_directory_path)
-    mb.showinfo("Confirm", "New directory created!")
+    mb.showinfo("Action done", "New directory created!")
 
 
 

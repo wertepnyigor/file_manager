@@ -24,8 +24,6 @@ buttonsFrame.pack()
 
 open_finder_button = Button(buttonsFrame, text="Open Finder", command=open_finder, height=2, width=10)
 open_finder_button.grid(row=0, column=0)
-open_finder_button = Button(buttonsFrame, text="Open Finder", command=open_finder, height=2, width=10)
-open_finder_button.grid(row=0, column=0)
 
 open_file_button = Button(buttonsFrame, text="Open File", command=open_file, height=2, width=10)
 open_file_button.grid(row=0, column=1)
