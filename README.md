@@ -7,3 +7,7 @@ Users will be divided into groups of individual users with basic rights and admi
 UPDATE:
 In first step of program creation it will handle simple name changes. It will allow to chose a file from desktop and then change its name to new one. 
 In next step addition of different paths will be supported. 
+
+
+
+Needed functions added, testing basic funcitionality. 
