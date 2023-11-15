@@ -1,9 +1,5 @@
-import os
 from tkinter import *
-from tkinter import messagebox
-from GUI_handling import *
-import easygui
-
+from files_handling import *
 
 loginWindow = Tk()
 loginWindow.title("File Manager")
@@ -26,24 +22,24 @@ welcomeLabel.pack()
 buttonsFrame = Frame(loginWindow)
 buttonsFrame.pack()
 
-open_finder_button = Button(buttonsFrame, text="Open Finder", command=open_finder, height=2, width=8)
+open_finder_button = Button(buttonsFrame, text="Open Finder", command=open_finder, height=2, width=10)
 open_finder_button.grid(row=0, column=0)
-open_finder_button = Button(buttonsFrame, text="Open Finder", command=open_finder, height=2, width=8)
+open_finder_button = Button(buttonsFrame, text="Open Finder", command=open_finder, height=2, width=10)
 open_finder_button.grid(row=0, column=0)
 
-open_file_button = Button(buttonsFrame, text="Open File", command=open_file, height=2, width=8)
+open_file_button = Button(buttonsFrame, text="Open File", command=open_file, height=2, width=10)
 open_file_button.grid(row=0, column=1)
 
-move_file_button = Button(buttonsFrame, text="Move file", command=move_file, height=2, width=8)
+move_file_button = Button(buttonsFrame, text="Move file", command=move_file, height=2, width=10)
 move_file_button.grid(row=0, column=2)
 
-delete_file_button = Button(buttonsFrame, text="Delete file", command=delete_file, height=2, width=8)
+delete_file_button = Button(buttonsFrame, text="Delete file", command=delete_file, height=2, width=10)
 delete_file_button.grid(row=1, column=0)
 
-change_name_button = Button(buttonsFrame, text="Change name", command=change_name, height=2, width=8)
+change_name_button = Button(buttonsFrame, text="Change name", command=change_name, height=2, width=10)
 change_name_button.grid(row=1, column=1)
 
-make_directory_button = Button(buttonsFrame, text="Make directory", command=make_directory, height=2, width=8)
+make_directory_button = Button(buttonsFrame, text="Make directory", command=make_directory, height=2, width=10)
 make_directory_button.grid(row=1, column=2)
 
 
